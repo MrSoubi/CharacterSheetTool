@@ -25,3 +25,21 @@ MainPage::MainPage()
 {
 	InitializeComponent();
 }
+
+
+void CharaterSheetTool::MainPage::rollButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+}
+
+
+void CharaterSheetTool::MainPage::loadImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+}
+
+
+void CharaterSheetTool::MainPage::saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
+}
