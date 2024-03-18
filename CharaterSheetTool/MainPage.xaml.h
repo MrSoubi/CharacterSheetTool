@@ -17,5 +17,7 @@ namespace CharaterSheetTool
 	public:
 		MainPage();
 
+	private:
+
 	};
 }

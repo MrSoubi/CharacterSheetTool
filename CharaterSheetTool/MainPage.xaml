@@ -9,6 +9,75 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition MaxHeight="150"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="600"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <!--#region Image -->
+        <Border BorderBrush="Black" BorderThickness="5" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0"/>
+                <Button Grid.Row="1" Height="{Binding ActualHeight, ElementName=button, Mode=OneWay}" VerticalAlignment="Bottom" Margin="3" HorizontalAlignment="Stretch" Content="Load image"/>
+            </Grid>
+
+        </Border>
+        <!--#endregion -->
+
+        <!--#region Name -->
+        <Border BorderBrush="Black" BorderThickness="5" Grid.Row="0" Grid.Column="1" Margin="3">
+            <TextBox Grid.Row="0" Grid.Column="1" PlaceholderText="Name" FontStretch="Expanded"/>
+        </Border>
+        <!--#endregion -->
+
+        <!--#region Statistics -->
+        <Border BorderBrush="Black" BorderThickness="5" Grid.Row="1" Grid.Column="1" Margin="3">
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition MaxHeight="100"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition MaxHeight="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Statistics" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Text="Attack" FontSize="30"/>
+                    <TextBlock Text="Defense" FontSize="30"/>
+                    <TextBlock Text="Luck" FontSize="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="2D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
+                    <TextBlock Text="2D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
+                    <TextBlock Text="1D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <Button x:Name="button" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Roll the dice !" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="3"/>
+            </Grid>
+        </Border>
+        <!--#endregion-->
+
+        <!--#region Background-->
+        <Border BorderBrush="Black" BorderThickness="5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="3">
+            <TextBox PlaceholderText="Background and description" />
+        </Border>
+        <!--#endregion-->
+
+        <!--#region Save & Quit-->
+        <Border BorderBrush="Black" BorderThickness="5" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="3">
+            <Button Content="Save" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Border>
+        <!--#endregion-->
     </Grid>
 </Page>
