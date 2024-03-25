@@ -6,6 +6,8 @@
 #pragma once
 
 #include "MainPage.g.h"
+#include "CharacterSheet.h"
+#include "Utils.h"
 
 namespace CharaterSheetTool
 {
@@ -18,9 +20,15 @@ namespace CharaterSheetTool
 		MainPage();
 
 	private:
+		std::unique_ptr<CharacterSheet> character = std::make_unique<CharacterSheet>();
 
 		void rollButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void loadImageButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void saveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_1(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_2(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_3(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void nameText_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e);
 	};
 }

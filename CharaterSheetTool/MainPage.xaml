@@ -36,7 +36,7 @@
 
         <!--#region Name -->
         <Border BorderBrush="Black" BorderThickness="5" Grid.Row="0" Grid.Column="1" Margin="3">
-            <TextBox x:Name="nameText" Grid.Row="0" Grid.Column="1" PlaceholderText="Name" FontStretch="Expanded"/>
+            <TextBox x:Name="nameText" Grid.Row="0" Grid.Column="1" PlaceholderText="Name" FontStretch="Expanded" TextChanged="nameText_TextChanged"/>
         </Border>
         <!--#endregion -->
 
@@ -60,10 +60,24 @@
                     <TextBlock Text="Gold" FontSize="30"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-                    <TextBlock x:Name="attackValue" Text="2D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
-                    <TextBlock x:Name="defenseValue" Text="2D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
-                    <TextBlock x:Name="luckValue" Text="1D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
-                    <TextBlock x:Name="goldAmount" Text="3D6 + 10" FontSize="30" HorizontalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="attackValue" Text="2D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
+                        <Button Content="Roll !" Margin="30, 0, 0, 0" Click="Button_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="defenseValue" Text="2D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
+                        <Button Content="Roll !" Margin="30, 0, 0, 0" Click="Button_Click_1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="luckValue" Text="1D6 + 5" FontSize="30" HorizontalAlignment="Center"/>
+                        <Button Content="Roll !" Margin="30, 0, 0, 0" Click="Button_Click_2"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="goldAmount" Text="3D6 + 10" FontSize="30" HorizontalAlignment="Center"/>
+                        <Button Content="Roll !" Margin="30, 0, 0, 0" Click="Button_Click_3"/>
+                    </StackPanel>
+                    
+                    
                 </StackPanel>
                 <Button x:Name="rollButton" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Roll the dice !" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="3" Click="rollButton_Click"/>
             </Grid>
